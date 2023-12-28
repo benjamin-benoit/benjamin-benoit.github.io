@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="container">
       <div className="section">
-        <img className="illu" src="/assets/benjy_ben_send-01.png" />
+        <img className="illu" src="public/benjy_ben_send-01.png" />
         <div className="bloc">
           <Me />
           <Presentation />
