@@ -1,19 +1,26 @@
 .section{
+  display: flex;
   width: 100vh;
   height: 100vw;
+}
+
+.illu {
+  width: 40%;
+  min-width: 200px;
 }
 
 .me {
   font-size: 2em !important;
   text-align: center;
-  color: rgba(75, 214, 253, 0.84);
+  color: #000;
 }
 
 .container {
   width: 100%;
   height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
+  background-color: #78d3a7;
 }
 
 .container div.section {
@@ -26,18 +33,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.container div.section:nth-of-type(even) {
-  background-color: rgba(75, 214, 253, 1);
-  color:  rgb(27 20 41);
-  height: 30vh;
-}
-
-.container div.section:last-of-type {
-  background-color: rgba(75, 214, 253, 1);
-  color:  rgb(27 20 41);
-  height: 10vh;
 }
 
 .presentation {
@@ -91,7 +86,12 @@
 }
 
 .footer {
-  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 1em;
+  background-color: #62ba8e;
 }
 
 .story-title {
@@ -110,4 +110,18 @@
 .social-links > * {
   display: block;
   margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; /* Facultatif : change la direction du flux en colonne sur les petits écrans */
+  }
+
+  .illu {
+    display: none; /* Cache l'élément sur les écrans de petite taille */
+  }
+
+  .me {
+    font-size: 1.5em !important;
+  }
 }
